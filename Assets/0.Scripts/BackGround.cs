@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BackGround : MonoBehaviour
 {
+    
     [System.Serializable]
     public class BGData
     {
@@ -11,14 +12,10 @@ public class BackGround : MonoBehaviour
         public float speed;
     }
 
-    public List<BGData> bGDatas = new List<BGData>();
+    [SerializeField] List<BGData> bGDatas = new List<BGData>();
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()

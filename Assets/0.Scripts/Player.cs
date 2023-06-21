@@ -67,19 +67,35 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                PlayerBullet b = Instantiate(bullet,playerPos);
+                PlayerBullet b = Instantiate(bullet, playerPos);
                 b.speed = bulletspeed;
+                b.name = "pBullet";
                 b.transform.SetParent(bulletparent);
                 fireTimer = 0;
+
+                Destroy(b.gameObject, 1f);
             }
         }
-
-        
-
-
     }
 
-
-
-
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "EnemyBullet")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.transform.GetComponent<EnemyA>())
+        {
+            Destroy(gameObject);
+        }
+    }
+    /*
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.GetComponent<EnemyA>())
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+    */
 }

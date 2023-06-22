@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
                 PlayerBullet b = Instantiate(bullet, playerPos);
                 b.speed = bulletspeed;
                 b.name = "pBullet";
+                b.power = 2;
                 b.transform.SetParent(bulletparent);
                 fireTimer = 0;
 

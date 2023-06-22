@@ -22,7 +22,7 @@ public class EnemyCont : MonoBehaviour
 
     void RandomPosition()
     {
-        Vector3 pos = parent.localPosition;
+        Vector3 pos = spawnBox.transform.position;
 
         // 박스 콜라이더의 값
         float sizeX = spawnBox.bounds.size.x;
@@ -33,6 +33,8 @@ public class EnemyCont : MonoBehaviour
         sizeY = Random.Range((sizeY / 2) * -1, sizeY / 2);
 
         Vector3 randPos = new Vector3(sizeX, sizeY, 0f);
-        Instantiate(enemy, randPos, Quaternion.identity, parent);
+
+        Vector3 rPos = pos + randPos;
+        Instantiate(enemy, rPos, Quaternion.identity, parent);
     }
 }

@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyA : Enemy
+public class EnemyB : Enemy
 {
     public override void Init()
     {
-        data.speed = 3;
-        data.hp = 10;
-        base.Init();
+        data.speed = 2;
+        data.hp = 12;
     }
 
     // Start is called before the first frame update
@@ -16,7 +15,4 @@ public class EnemyA : Enemy
     {
         Init();
     }
-
-    
-
 }

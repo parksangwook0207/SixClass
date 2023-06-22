@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     public float speed;
-    
+    public float power;
+
     // Update is called once per frame
     void Update()
     {

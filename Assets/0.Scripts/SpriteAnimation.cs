@@ -10,7 +10,7 @@ public class SpriteAnimation : MonoBehaviour
 {
     private List<Sprite> sprites = new List<Sprite>();
     private SpriteRenderer sr;
-    //private Image image;
+    private Image image;
 
     private float spriteDelayTime;
     private float delayTime = 0f;
@@ -22,17 +22,13 @@ public class SpriteAnimation : MonoBehaviour
     public bool isCanvas = false;
 
     private void Start()
-    {
-       if (isCanvas)
-        {
-            sr = GetComponent<SpriteRenderer>();
-        }
-        // 이미지 용도
-        /*if(isCanvas)
+    {      
+       
+        if(isCanvas)
             image = GetComponent<Image>();
         else
             sr = GetComponent<SpriteRenderer>();
-        */
+       
     }
     private void Update()
     {
@@ -49,13 +45,12 @@ public class SpriteAnimation : MonoBehaviour
                 sr.sprite = sprites[spriteAnimationIndex];
                 spriteAnimationIndex++;
             }
-            // 이미지 용도
-            /* if(isCanvas)
+             if(isCanvas)
                  image.sprite = sprites[spriteAnimationIndex];
              else
                  sr.sprite = sprites[spriteAnimationIndex];
              spriteAnimationIndex++;
-            */
+            
 
             if (spriteAnimationIndex > sprites.Count - 1)
             {

@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8696950723543325814}
   - component: {fileID: 8696950723543325835}
-  - component: {fileID: 8696950723543325834}
+  - component: {fileID: -601842609948431524}
+  - component: {fileID: 331484753585294766}
   - component: {fileID: 8696950723543325832}
   - component: {fileID: 8696950723543325833}
   m_Layer: 0
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8696950723543325834
+--- !u!114 &-601842609948431524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,6 +101,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe53fed53213afd4285dfda3dca0d759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSprite:
+  - {fileID: 8414478535512612329, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
+  - {fileID: 4326287474489854147, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
+--- !u!114 &331484753585294766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696950723543325815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abcb087cd6efea346868834107c9501d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCanvas: 0
 --- !u!58 &8696950723543325832
 CircleCollider2D:
   m_ObjectHideFlags: 0

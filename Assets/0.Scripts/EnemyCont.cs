@@ -12,6 +12,7 @@ public class EnemyCont : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("RandomPosPosition", 5f, 1f);
         //InvokeRepeating("RandomPosition", 2, 4);
         
     }

@@ -6,7 +6,7 @@ public class EnemyA : Enemy
 {
     public override void Init()
     {
-        data.speed = 3f;
+        data.speed = 2f;
         data.hp = 10;
         data.fireDelayTime = 1f;
         base.Init();

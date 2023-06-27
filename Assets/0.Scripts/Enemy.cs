@@ -31,7 +31,7 @@ public abstract class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(Vector3.down * Time.deltaTime * data.speed);
+        transform.Translate(Vector3.down * Time.deltaTime * data.speed);
 
         if (p == null)
         {

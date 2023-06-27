@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (collision.transform.GetComponent<EnemyA>())
+        if (collision.transform.GetComponent<Enemy>()|| collision.gameObject.GetComponent<Item>())
         {
             Destroy(gameObject);
         }

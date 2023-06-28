@@ -144,7 +144,8 @@ public abstract class Enemy : MonoBehaviour
     {
         Destroy(GetComponent<Rigidbody2D>());
         Destroy(GetComponent<CircleCollider2D>());
-
+        DestoryBullet(null);
+        UI.instance.SetScore += 10;
         sa.SetSprite(boomSprite, 0.2f, () =>
         {
             for (int i = 0; i < items.Count; i++)

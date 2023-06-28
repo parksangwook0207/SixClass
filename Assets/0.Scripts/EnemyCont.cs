@@ -33,9 +33,9 @@ public class EnemyCont : MonoBehaviour
         Vector3 randdomPos = new Vector3(sizeX, sizeY, 0f);
 
         Vector3 randPos = pos + randdomPos;
-        int rand = Random.Range(0, enemy.Count);
-        Enemy e = Instantiate(enemy[rand], randPos, Quaternion.identity, parent);
-        e.SetBulletParent(bulletparent);
+        //int rand = Random.Range(0, enemy.Count);
+        //Enemy e = Instantiate(enemy[rand], randPos, Quaternion.identity, parent);
+       // e.SetBulletParent(bulletparent);
     }
 
     IEnumerator SpawnEnemy1()

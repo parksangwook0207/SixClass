@@ -10,16 +10,16 @@ public class UiCount : MonoBehaviour
     [SerializeField] private TMP_Text txt;
 
 
-    float maxCnt = 1;
+    int maxCnt = 6;
 
-    float startval = 6;
+    
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        txt.text = $"{startval}";
+        
     }
 
     // Update is called once per frame
@@ -27,15 +27,12 @@ public class UiCount : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.K))
         {
-            StartCoroutine("Cooltime", 6);
+            countImage.fillAmount -= Time.deltaTime * 3f;
+            float val = maxCnt;
+            val -= countImage.fillAmount * Time.deltaTime * 3f;
+            txt.SetText(string.Format("{0}", maxCnt * 1));
         }
     }
 
-    void Cooltime(float cool)
-    {
-        float val += Time.deltaTime;
-
-        txt.text = $"{startval - val}";
-
-    }
+   
 }

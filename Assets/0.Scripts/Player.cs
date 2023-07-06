@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform playerPos;
     [SerializeField] private Transform bulletparent;
 
+
     public float speed;
     public float fireDelayTime;
     public float fireTimer;

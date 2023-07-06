@@ -9,6 +9,7 @@ public class UiCount : MonoBehaviour
     [SerializeField] private Image countImage;
     [SerializeField] private TMP_Text txt;
 
+    
 
     float maxCnt = 6;
     float value;
@@ -16,10 +17,18 @@ public class UiCount : MonoBehaviour
 
     bool isStart;
     */
+
+    //[SerializeField] private Button button;
+    [SerializeField] private SpeciaBullet sb;
+
     // Start is called before the first frame update
     void Start()
-    {      
-       // txt.text = $"{maxCnt}";
+    {
+        // txt.text = $"{maxCnt}";
+        //for (int i = 0; i < 10; i++)
+      //  {
+           // button.onClick.AddListener(() => OnClick(i));
+        //}
     }
 
     // Update is called once per frame
@@ -40,7 +49,14 @@ public class UiCount : MonoBehaviour
         }
         */
     }
-    
+
+    public void OnClick()
+    {
+        sb.OnShow();
+        Debug.Log("¹öÆ°");
+        
+    }
+
 
 
 

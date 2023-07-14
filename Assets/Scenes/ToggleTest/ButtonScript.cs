@@ -10,15 +10,21 @@ public class ButtonScript : MonoBehaviour
     [SerializeField] private Image imageNumber;
     [SerializeField] private Image imageQR;
 
-    [SerializeField] private Slider slider;
+    [SerializeField] private Image ID;
+    [SerializeField] private GameObject ball;
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        toggle.isOn = false;
-        imageID.transform.gameObject.SetActive(false);
+        imageID.transform.gameObject.SetActive(true);
         imageNumber.transform.gameObject.SetActive(false);
         imageQR.transform.gameObject.SetActive(false);
+
+        ID.transform.gameObject.SetActive(false);
+
 
     }
 
@@ -41,5 +47,16 @@ public class ButtonScript : MonoBehaviour
         imageID.transform.gameObject.SetActive(false);
         imageNumber.transform.gameObject.SetActive(false);
         imageQR.transform.gameObject.SetActive(true);
+    }
+
+    public void OnID()
+    {
+        ID.transform.gameObject.SetActive(true);
+        ball.transform.localPosition = new Vector3(112, -26);
+    }
+    public void OnoffID()
+    {
+        ID.transform.gameObject.SetActive(false);
+        ball.transform.localPosition = new Vector3(79, -26);
     }
 }

@@ -13,7 +13,7 @@ public class ButtonScript : MonoBehaviour
     [SerializeField] private Image ID;
     [SerializeField] private GameObject ball;
 
-
+    float timer = 180;
 
 
     // Start is called before the first frame update
@@ -27,6 +27,15 @@ public class ButtonScript : MonoBehaviour
 
 
     }
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+
+        System.TimeSpan span = System.TimeSpan.FromSeconds(timer);
+        Debug.Log($"{span.Minutes}:{span.Seconds}");
+    }
+
 
     public void OnImageID()
     {
